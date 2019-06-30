@@ -1,0 +1,72 @@
+/*
+For JSBin compo
+Author: Kushagra Gour @chinchang457
+https://i.imgur.com/iGkKiOu.gif
+*/
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background: #343438;
+}
+
+.scene {
+  position: absolute;
+  display: inline-block;
+  margin-top: 150px;
+  width: 50px;
+  height: 50px;
+}
+
+.cube {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  animation: rotatesmall ease 4s infinite 2s;
+}
+
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  border: 1px solid white;
+}
+
+.cube-face-front {
+  transform: translate3d(0, 0, 25px);
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 25px);
+}
+
+@keyframes rotatesmall {
+  from {
+    transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  }
+  90% {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(360deg);
+  }  
+  to {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(360deg);
+  } 
+}
